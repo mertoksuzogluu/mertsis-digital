@@ -8,7 +8,7 @@ interface CaseStudyCardProps {
   index?: number;
 }
 
-export function CaseStudyCard({ project, index = 0 }: CaseStudyCardProps) {
+export function CaseStudyCard({ project }: CaseStudyCardProps) {
   return (
     <article style={{ display: "flex" }}>
       <Link
