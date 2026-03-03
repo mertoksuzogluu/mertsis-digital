@@ -1,101 +1,122 @@
-import Image from "next/image";
+import { services } from "@/data/services";
+import { processSteps } from "@/data/process";
+import { getFeaturedCaseStudies } from "@/data/caseStudies";
+import { testimonials } from "@/data/testimonials";
+import { faqItems } from "@/data/faq";
+import { Button } from "@/components/ui/Button";
+import { SectionHeading } from "@/components/ui/SectionHeading";
+import { CaseStudyCard } from "@/components/CaseStudyCard";
+import { Hero } from "@/components/home/Hero";
+import { ServiceCards } from "@/components/home/ServiceCards";
+import { ProcessSection } from "@/components/home/ProcessSection";
+import { TestimonialsSection } from "@/components/home/TestimonialsSection";
+import { FAQSection } from "@/components/home/FAQSection";
 
-export default function Home() {
+export default function HomePage() {
+  const featured = getFeaturedCaseStudies(3);
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <Hero />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Hizmetler */}
+      <section
+        style={{ paddingTop: "3rem", paddingBottom: "clamp(4rem,8vw,7rem)" }}
+        aria-labelledby="hizmetler-heading"
+      >
+        <div className="container-narrow">
+          <SectionHeading
+            id="hizmetler-heading"
+            title="Hizmetler"
+            subtitle="Sosyal medya, performans, içerik, web ve 3D — tek ekip."
+          />
+          <ServiceCards services={services} />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      <ProcessSection steps={processSteps} />
+
+      {/* Öne Çıkan Projeler */}
+      <section
+        style={{ padding: "clamp(4rem,8vw,7rem) 0" }}
+        aria-labelledby="projeler-heading"
+      >
+        <div className="container-narrow">
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "1rem",
+              marginBottom: "clamp(2rem,4vw,3.5rem)",
+            }}
+          >
+            <div style={{ minWidth: 0 }}>
+              <SectionHeading
+                id="projeler-heading"
+                title="Öne Çıkan Projeler"
+                subtitle="Son dönemde markaların büyümesine nasıl katkı sağladığımıza bir göz atın."
+              />
+            </div>
+            <div>
+              <Button href="/projeler" variant="secondary" size="sm">
+                Tüm Projeler
+              </Button>
+            </div>
+          </div>
+          <div
+            style={{
+              display: "grid",
+              gap: "2rem",
+              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+            }}
+          >
+            {featured.map((project, i) => (
+              <CaseStudyCard key={project.slug} project={project} index={i} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <TestimonialsSection testimonials={testimonials} />
+      <FAQSection items={faqItems} />
+
+      {/* Son CTA */}
+      <section
+        style={{ padding: "clamp(4rem,8vw,7rem) 0", textAlign: "center" }}
+        aria-labelledby="final-cta-heading"
+      >
+        <div className="container-narrow" style={{ textAlign: "center" }}>
+          <h2
+            id="final-cta-heading"
+            style={{
+              fontSize: "clamp(1.25rem,3vw,2rem)",
+              fontWeight: 600,
+              letterSpacing: "-0.02em",
+              color: "#0a0a0a",
+            }}
+          >
+            24 Saatte Teklif &amp; Yol Haritası
+          </h2>
+          <p
+            style={{
+              marginTop: "1rem",
+              fontSize: "1.125rem",
+              lineHeight: 1.65,
+              color: "#52525b",
+              maxWidth: "36rem",
+              marginLeft: "auto",
+              marginRight: "auto",
+            }}
+          >
+            İhtiyacını anlat, sana hızlıca plan + bütçe + takvim çıkaralım.
+          </p>
+          <div style={{ marginTop: "2rem" }}>
+            <Button href="/iletisim?form=teklif" variant="primary" size="lg">
+              Teklif Al
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

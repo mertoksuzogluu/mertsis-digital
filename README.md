@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mertsis Digital — Premium Dijital Ajans Web Sitesi
 
-## Getting Started
+Next.js 14 (App Router), TypeScript, Tailwind CSS ve Framer Motion ile geliştirilmiş, dönüşüm odaklı kurumsal ajans sitesi.
 
-First, run the development server:
+## Çalıştırma
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Tarayıcıda [http://localhost:3000](http://localhost:3000) adresini açın.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Yapılandırma
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Site ve iletişim
 
-## Learn More
+- **`src/config/site.ts`**  
+  E-posta, telefon, adres, sosyal medya linkleri ve **Calendly** (Görüşme Planla) URL’i burada güncellenir.
 
-To learn more about Next.js, take a look at the following resources:
+### Calendly
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- “Görüşme Planla” butonu `siteConfig.calendlyUrl` değerine gider.
+- Kendi Calendly linkinizi `src/config/site.ts` içindeki `calendlyUrl` alanına yazın.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Ortam değişkeni (opsiyonel)
 
-## Deploy on Vercel
+- **`NEXT_PUBLIC_SITE_URL`**  
+  Sitemap ve OpenGraph için canonical URL (örn. `https://mertsis.digital`). Vercel’de otomatik tanımlanabilir.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Görsel ve proje içerikleri
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Proje görselleri
+
+- Tüm proje görselleri **`/public/work/`** klasöründe tutulur.
+- Varsayılan olarak tüm case study’ler `placeholder.svg` kullanır.
+- Kendi görsellerinizi (jpg/png) bu klasöre ekleyin; ardından **`src/data/caseStudies.ts`** içinde ilgili projenin `kapakGorseli` ve `galeriGorselleri` alanlarını güncelleyin.
+
+Örnek:
+
+```ts
+// caseStudies.ts
+{
+  slug: "e-ticaret-roas-artisi",
+  // ...
+  kapakGorseli: "/work/ecommerce-kapak.jpg",
+  galeriGorselleri: ["/work/ecommerce-1.jpg", "/work/ecommerce-2.jpg", "/work/ecommerce-3.jpg"],
+}
+```
+
+### Case study metinleri
+
+- **`src/data/caseStudies.ts`**  
+  Proje başlığı, özet, problem, çözüm, teslimatlar, metrikler ve görsel yolları bu dosyadan düzenlenir. Yeni proje eklemek için aynı yapıda bir obje ekleyin.
+
+## Sayfa yapısı
+
+| Sayfa        | Yol                    |
+|-------------|-------------------------|
+| Anasayfa    | `/`                    |
+| Hizmetler   | `/hizmetler`           |
+| Projeler    | `/projeler`            |
+| Proje detay | `/projeler/[slug]`     |
+| Hakkımızda  | `/hakkimizda`          |
+| İletişim    | `/iletisim`            |
+| Gizlilik    | `/gizlilik`            |
+| Kullanım Şartları | `/kullanim-sartlari` |
+
+## İletişim formu
+
+- Form validasyonu ve başarı mesajı front-end’de çalışır.
+- Backend/API bağlamak için **`src/components/ContactForm.tsx`** içindeki `handleSubmit` fonksiyonunu kendi endpoint’inize yönlendirebilirsiniz.
+
+## Tema
+
+- Varsayılan tema **koyu** (true black / charcoal).
+- Sağ üstteki toggle ile **açık tema** seçilebilir; tercih `localStorage` içinde saklanır.
+
+## Deploy (Vercel)
+
+1. Projeyi GitHub’a bağlayın.
+2. [Vercel](https://vercel.com) üzerinden “Import” ile projeyi seçin.
+3. Build komutu: `npm run build`, output: default.
+4. `NEXT_PUBLIC_SITE_URL` ortam değişkenini production domain’inizle (örn. `https://mertsis.digital`) tanımlayın.
+
+## Teknolojiler
+
+- **Next.js 14** (App Router)
+- **TypeScript**
+- **Tailwind CSS**
+- **Framer Motion**
+- **next/image** (görseller için)
+- SEO: metadata, OpenGraph, `sitemap.xml`, `robots.txt`
+
+---
+
+© Mertsis Digital. İletişim ve içerik güncellemeleri için `src/config/site.ts` ve ilgili data dosyalarını kullanın.
