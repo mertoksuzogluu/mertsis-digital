@@ -46,8 +46,8 @@ export function Header() {
           top: 0,
           zIndex: 50,
           width: "100%",
-          borderBottom: "1px solid rgba(0,0,0,0.08)",
-          background: "rgba(255,255,255,0.92)",
+          borderBottom: "1px solid rgba(255,255,255,0.1)",
+          background: "rgba(10,10,10,0.94)",
           backdropFilter: "blur(16px)",
           WebkitBackdropFilter: "blur(16px)",
         }}
@@ -70,7 +70,7 @@ export function Header() {
               alignItems: "center",
               flexShrink: 0,
               textDecoration: "none",
-              color: "#0a0a0a",
+              color: "#fafafa",
             }}
             aria-label="Mertsis Digital ana sayfa"
           >
@@ -97,7 +97,7 @@ export function Header() {
                 style={{
                   fontSize: "0.875rem",
                   fontWeight: 500,
-                  color: pathname === item.href ? "#2563eb" : "#3f3f46",
+                  color: pathname === item.href ? "#93c5fd" : "#d4d4d8",
                   textDecoration: "none",
                 }}
               >
@@ -140,20 +140,20 @@ export function Header() {
             <div style={{ width: "22px", height: "16px", position: "relative" }}>
               <span style={{
                 position: "absolute", left: 0, width: "22px", height: "2px",
-                background: "#0a0a0a", borderRadius: "1px",
+                background: "#fafafa", borderRadius: "1px",
                 transition: "transform 0.3s, top 0.3s, opacity 0.3s",
                 top: mobileOpen ? "7px" : "0px",
                 transform: mobileOpen ? "rotate(45deg)" : "none",
               }} />
               <span style={{
                 position: "absolute", left: 0, top: "7px", width: "22px", height: "2px",
-                background: "#0a0a0a", borderRadius: "1px",
+                background: "#fafafa", borderRadius: "1px",
                 transition: "opacity 0.2s",
                 opacity: mobileOpen ? 0 : 1,
               }} />
               <span style={{
                 position: "absolute", left: 0, width: "22px", height: "2px",
-                background: "#0a0a0a", borderRadius: "1px",
+                background: "#fafafa", borderRadius: "1px",
                 transition: "transform 0.3s, top 0.3s, opacity 0.3s",
                 top: mobileOpen ? "7px" : "14px",
                 transform: mobileOpen ? "rotate(-45deg)" : "none",
@@ -171,7 +171,7 @@ export function Header() {
             inset: 0,
             top: HEADER_BAR_HEIGHT,
             zIndex: 49,
-            background: "rgba(255,255,255,0.97)",
+            background: "rgba(10,10,10,0.98)",
             backdropFilter: "blur(20px)",
             WebkitBackdropFilter: "blur(20px)",
             overflowY: "auto",
@@ -196,9 +196,9 @@ export function Header() {
                   padding: "1rem 0",
                   fontSize: "1.25rem",
                   fontWeight: 600,
-                  color: pathname === item.href ? "#2563eb" : "#0a0a0a",
+                  color: pathname === item.href ? "#93c5fd" : "#fafafa",
                   textDecoration: "none",
-                  borderBottom: "1px solid rgba(0,0,0,0.06)",
+                  borderBottom: "1px solid rgba(255,255,255,0.08)",
                   transition: "color 0.15s",
                 }}
               >
@@ -215,11 +215,11 @@ export function Header() {
               </Button>
             </div>
 
-            <div style={{ marginTop: "2rem", paddingTop: "1.5rem", borderTop: "1px solid rgba(0,0,0,0.06)" }}>
-              <a href={`mailto:${siteConfig.contact.email}`} style={{ display: "block", fontSize: "0.875rem", color: "#64748b", textDecoration: "none", marginBottom: "0.5rem" }}>
+            <div style={{ marginTop: "2rem", paddingTop: "1.5rem", borderTop: "1px solid rgba(255,255,255,0.1)" }}>
+              <a href={`mailto:${siteConfig.contact.email}`} style={{ display: "block", fontSize: "0.875rem", color: "#a1a1aa", textDecoration: "none", marginBottom: "0.5rem" }}>
                 {siteConfig.contact.email}
               </a>
-              <a href={`tel:${siteConfig.contact.phone.replace(/\s/g, "")}`} style={{ display: "block", fontSize: "0.875rem", color: "#64748b", textDecoration: "none" }}>
+              <a href={`tel:${siteConfig.contact.phone.replace(/\s/g, "")}`} style={{ display: "block", fontSize: "0.875rem", color: "#a1a1aa", textDecoration: "none" }}>
                 {siteConfig.contact.phone}
               </a>
             </div>
