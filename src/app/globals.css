@@ -51,6 +51,10 @@
   .container-wide {
     @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8;
   }
+  /* Sadece navbar — sayfa gövdesi 7xl kalır */
+  .container-header {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8;
+  }
 }
 
 /* Subtle selection */

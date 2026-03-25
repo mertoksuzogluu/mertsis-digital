@@ -63,7 +63,7 @@ export function Header() {
         role="banner"
       >
         <div
-          className="container-wide"
+          className="container-header"
           style={{
             display: "flex",
             minHeight: HEADER_BAR_HEIGHT,

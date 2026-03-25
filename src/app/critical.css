@@ -38,7 +38,7 @@ header {
   align-items: center;
   justify-content: space-between;
 }
-header > div { display: flex; align-items: center; justify-content: space-between; width: 100%; max-width: 80rem; margin: 0 auto; }
+header > div { display: flex; align-items: center; justify-content: space-between; width: 100%; max-width: 72rem; margin: 0 auto; }
 header > div > a:first-of-type { font-size: 1.125rem; font-weight: 600; color: var(--fg); }
 nav { display: flex; align-items: center; gap: 2rem; }
 nav a { font-size: 0.875rem; font-weight: 400 !important; color: var(--fg); }
