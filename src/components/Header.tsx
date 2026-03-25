@@ -8,7 +8,7 @@ import { siteConfig } from "@/config/site";
 import { Button } from "@/components/ui/Button";
 
 /** Navbar yüksekliği — mobil menü overlay hizası için aynı değer kullanılır */
-const HEADER_BAR_HEIGHT = "5.75rem";
+const HEADER_BAR_HEIGHT = "7.5rem";
 
 export function Header() {
   const pathname = usePathname();
@@ -69,14 +69,8 @@ export function Header() {
               width={520}
               height={120}
               priority
-              sizes="(max-width: 480px) 85vw, (max-width: 768px) 360px, 520px"
+              sizes="(max-width: 480px) 90vw, (max-width: 768px) 400px, 520px"
               className="mertsis-logo"
-              style={{
-                height: "clamp(3rem, 12vw, 4.5rem)",
-                width: "auto",
-                maxWidth: "min(92vw, 28rem)",
-                objectFit: "contain",
-              }}
             />
           </Link>
 

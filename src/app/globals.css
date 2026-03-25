@@ -58,3 +58,21 @@
   background: rgba(59, 130, 246, 0.25);
   color: inherit;
 }
+
+/*
+  Header logo: next/image sarmalayıcısı .mertsis-logo span üzerinde; genel `img { height: auto }`
+  içteki gerçek <img> için yüksekliği sıfırlayıp logoyu küçültüyordu. Yüksekliği doğrudan img'ye ver.
+*/
+header .mertsis-logo {
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+}
+
+header .mertsis-logo img {
+  height: clamp(4rem, 5.5vw, 6rem) !important;
+  width: auto !important;
+  max-width: min(92vw, 28rem);
+  object-fit: contain;
+  display: block;
+}
