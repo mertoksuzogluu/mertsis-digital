@@ -64,7 +64,7 @@ export function Header() {
             aria-label="Mertsis Digital ana sayfa"
           >
             <Image
-              src="/logo-dark.png"
+              src="/logo.png"
               alt="Mertsis Digital"
               width={520}
               height={120}

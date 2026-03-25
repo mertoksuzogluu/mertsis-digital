@@ -38,7 +38,7 @@ export const metadata: Metadata = {
       "Premium kreatif + performans ile markanı büyüt. Sosyal medya, Meta Ads, içerik, web ve 3D çözümleri.",
     images: [
       {
-        url: "/logo-dark.png",
+        url: "/logo.png",
         width: 520,
         height: 120,
         alt: "Mertsis Digital",
@@ -49,14 +49,14 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Mertsis Digital | Premium Dijital Ajans",
     description: "Premium kreatif + performans ile markanı büyüt.",
-    images: ["/logo-dark.png"],
+    images: ["/logo.png"],
   },
   robots: {
     index: true,
     follow: true,
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "/logo.png",
   },
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://mertsisdigital.com"),
 };
