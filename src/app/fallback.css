@@ -182,11 +182,11 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
   .container-narrow { padding-left: 2rem; padding-right: 2rem; }
 }
 
-/* Header — beyaz logo için koyu şerit (açık gövde ile kontrast) */
+/* Header */
 header {
-  background: rgba(10, 10, 10, 0.94);
+  background: color-mix(in srgb, var(--background) 92%, transparent);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--border);
 }
 
 /* Logo (header içindeki ilk link) */
@@ -196,21 +196,21 @@ header > div > a:first-of-type {
 }
 
 header > div > a:first-of-type img.mertsis-header-logo {
-  height: clamp(5rem, 6.5vw, 7.5rem) !important;
+  height: clamp(6.25rem, 8vw, 9.5rem) !important;
   width: auto !important;
-  min-width: clamp(10rem, 28vw, 18rem) !important;
-  max-width: min(92vw, 32rem) !important;
+  min-width: clamp(13rem, 34vw, 22rem) !important;
+  max-width: min(94vw, 40rem) !important;
   object-fit: contain;
   object-position: left center;
   display: block;
 }
 
-header nav a {
+nav a {
   font-size: 0.875rem;
   font-weight: 400 !important;
-  color: #d4d4d8;
+  color: var(--foreground);
 }
-header nav a:hover { color: #93c5fd; }
+nav a:hover { color: var(--accent); }
 
 /* Buttons */
 a.inline-flex.items-center.justify-center.gap-2.rounded-button,

@@ -7,15 +7,15 @@ import { siteConfig } from "@/config/site";
 import { Button } from "@/components/ui/Button";
 
 /** Navbar yüksekliği — mobil menü overlay hizası için aynı değer kullanılır */
-const HEADER_BAR_HEIGHT = "8.5rem";
+const HEADER_BAR_HEIGHT = "10rem";
 
 /** next/image yerine düz <img>: optimizasyon katmanı stilleri logo boyutunu sürekli bozuyordu */
 const logoImgStyle: CSSProperties = {
-  height: "clamp(5rem, 6.5vw, 7.5rem)",
+  height: "clamp(6.25rem, 8vw, 9.5rem)",
   width: "auto",
-  minWidth: "clamp(10rem, 28vw, 18rem)",
-  maxWidth: "min(92vw, 32rem)",
-  minHeight: "5rem",
+  minWidth: "clamp(13rem, 34vw, 22rem)",
+  maxWidth: "min(94vw, 40rem)",
+  minHeight: "6.25rem",
   objectFit: "contain",
   objectPosition: "left center",
   display: "block",
@@ -46,8 +46,8 @@ export function Header() {
           top: 0,
           zIndex: 50,
           width: "100%",
-          borderBottom: "1px solid rgba(255,255,255,0.1)",
-          background: "rgba(10,10,10,0.94)",
+          borderBottom: "1px solid rgba(0,0,0,0.08)",
+          background: "rgba(255,255,255,0.92)",
           backdropFilter: "blur(16px)",
           WebkitBackdropFilter: "blur(16px)",
         }}
@@ -70,7 +70,7 @@ export function Header() {
               alignItems: "center",
               flexShrink: 0,
               textDecoration: "none",
-              color: "#fafafa",
+              color: "#0a0a0a",
             }}
             aria-label="Mertsis Digital ana sayfa"
           >
@@ -79,8 +79,8 @@ export function Header() {
             <img
               src="/logo.png"
               alt="Mertsis Digital"
-              width={520}
-              height={120}
+              width={640}
+              height={160}
               className="mertsis-header-logo"
               decoding="async"
               fetchPriority="high"
@@ -97,7 +97,7 @@ export function Header() {
                 style={{
                   fontSize: "0.875rem",
                   fontWeight: 500,
-                  color: pathname === item.href ? "#93c5fd" : "#d4d4d8",
+                  color: pathname === item.href ? "#2563eb" : "#3f3f46",
                   textDecoration: "none",
                 }}
               >
@@ -140,20 +140,20 @@ export function Header() {
             <div style={{ width: "22px", height: "16px", position: "relative" }}>
               <span style={{
                 position: "absolute", left: 0, width: "22px", height: "2px",
-                background: "#fafafa", borderRadius: "1px",
+                background: "#0a0a0a", borderRadius: "1px",
                 transition: "transform 0.3s, top 0.3s, opacity 0.3s",
                 top: mobileOpen ? "7px" : "0px",
                 transform: mobileOpen ? "rotate(45deg)" : "none",
               }} />
               <span style={{
                 position: "absolute", left: 0, top: "7px", width: "22px", height: "2px",
-                background: "#fafafa", borderRadius: "1px",
+                background: "#0a0a0a", borderRadius: "1px",
                 transition: "opacity 0.2s",
                 opacity: mobileOpen ? 0 : 1,
               }} />
               <span style={{
                 position: "absolute", left: 0, width: "22px", height: "2px",
-                background: "#fafafa", borderRadius: "1px",
+                background: "#0a0a0a", borderRadius: "1px",
                 transition: "transform 0.3s, top 0.3s, opacity 0.3s",
                 top: mobileOpen ? "7px" : "14px",
                 transform: mobileOpen ? "rotate(-45deg)" : "none",
@@ -171,7 +171,7 @@ export function Header() {
             inset: 0,
             top: HEADER_BAR_HEIGHT,
             zIndex: 49,
-            background: "rgba(10,10,10,0.98)",
+            background: "rgba(255,255,255,0.97)",
             backdropFilter: "blur(20px)",
             WebkitBackdropFilter: "blur(20px)",
             overflowY: "auto",
@@ -196,9 +196,9 @@ export function Header() {
                   padding: "1rem 0",
                   fontSize: "1.25rem",
                   fontWeight: 600,
-                  color: pathname === item.href ? "#93c5fd" : "#fafafa",
+                  color: pathname === item.href ? "#2563eb" : "#0a0a0a",
                   textDecoration: "none",
-                  borderBottom: "1px solid rgba(255,255,255,0.08)",
+                  borderBottom: "1px solid rgba(0,0,0,0.06)",
                   transition: "color 0.15s",
                 }}
               >
@@ -215,11 +215,11 @@ export function Header() {
               </Button>
             </div>
 
-            <div style={{ marginTop: "2rem", paddingTop: "1.5rem", borderTop: "1px solid rgba(255,255,255,0.1)" }}>
-              <a href={`mailto:${siteConfig.contact.email}`} style={{ display: "block", fontSize: "0.875rem", color: "#a1a1aa", textDecoration: "none", marginBottom: "0.5rem" }}>
+            <div style={{ marginTop: "2rem", paddingTop: "1.5rem", borderTop: "1px solid rgba(0,0,0,0.06)" }}>
+              <a href={`mailto:${siteConfig.contact.email}`} style={{ display: "block", fontSize: "0.875rem", color: "#64748b", textDecoration: "none", marginBottom: "0.5rem" }}>
                 {siteConfig.contact.email}
               </a>
-              <a href={`tel:${siteConfig.contact.phone.replace(/\s/g, "")}`} style={{ display: "block", fontSize: "0.875rem", color: "#a1a1aa", textDecoration: "none" }}>
+              <a href={`tel:${siteConfig.contact.phone.replace(/\s/g, "")}`} style={{ display: "block", fontSize: "0.875rem", color: "#64748b", textDecoration: "none" }}>
                 {siteConfig.contact.phone}
               </a>
             </div>

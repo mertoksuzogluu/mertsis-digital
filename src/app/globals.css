@@ -61,10 +61,10 @@
 
 /* Header logo: düz <img.mertsis-header-logo> + inline style; yedek !important ile global img kurallarına karşı */
 img.mertsis-header-logo {
-  height: clamp(5rem, 6.5vw, 7.5rem) !important;
+  height: clamp(6.25rem, 8vw, 9.5rem) !important;
   width: auto !important;
-  min-width: clamp(10rem, 28vw, 18rem) !important;
-  max-width: min(92vw, 32rem) !important;
+  min-width: clamp(13rem, 34vw, 22rem) !important;
+  max-width: min(94vw, 40rem) !important;
   object-fit: contain;
   object-position: left center;
   display: block;
