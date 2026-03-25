@@ -6,15 +6,15 @@ import { useState, useEffect, type CSSProperties } from "react";
 import { siteConfig } from "@/config/site";
 import { Button } from "@/components/ui/Button";
 
-/** Navbar — kompakt ama wordmark okunaklı; mobil overlay `top` ile aynı */
-const HEADER_BAR_HEIGHT = "5.25rem";
+/** Yüksek navbar — logo/wordmark okunaklı; mobil overlay `top` ile aynı */
+const HEADER_BAR_HEIGHT = "11rem";
 
-/** Beyaz şerit hero’dan dar; geniş ekranda bariz şerit */
-const HEADER_BAR_MAX = "min(100%, 56rem)";
+/** Beyaz şerit `container-wide` ile hizalı (80rem) */
+const HEADER_BAR_MAX = "min(100%, 80rem)";
 
 /** next/image yerine düz <img>: optimizasyon katmanı stilleri logo boyutunu sürekli bozuyordu */
-/** Logo bar içinde mümkün olduğunca büyük; bar 11rem’e dönmeden */
-const LOGO_BOX = "clamp(3.25rem, 7.5vw, 4.25rem)";
+/** Büyük kare logo + hafif scale (PNG boşluğu) */
+const LOGO_BOX = "clamp(8rem, 12vw, 10.5rem)";
 const logoBoxStyle: CSSProperties = {
   width: LOGO_BOX,
   height: LOGO_BOX,
@@ -29,6 +29,8 @@ const logoImgStyle: CSSProperties = {
   objectFit: "contain",
   objectPosition: "left center",
   display: "block",
+  transform: "scale(1.12)",
+  transformOrigin: "left center",
 };
 
 export function Header() {
@@ -74,12 +76,12 @@ export function Header() {
             backdropFilter: "blur(16px)",
             WebkitBackdropFilter: "blur(16px)",
             borderBottom: "1px solid rgba(0,0,0,0.08)",
-            borderRadius: "0 0 12px 12px",
-            boxShadow: "0 4px 20px -8px rgba(15, 23, 42, 0.1)",
+            borderRadius: "0 0 14px 14px",
+            boxShadow: "0 8px 32px -12px rgba(15, 23, 42, 0.08)",
           }}
         >
           <div
-            className="flex w-full items-center justify-between gap-3 px-4 sm:px-5"
+            className="flex w-full items-center justify-between gap-4 px-5 sm:px-6 lg:px-8"
             style={{
               minHeight: HEADER_BAR_HEIGHT,
               boxSizing: "border-box",
@@ -253,7 +255,7 @@ export function Header() {
       )}
 
       <style dangerouslySetInnerHTML={{ __html: `
-        .desktop-nav{display:flex;align-items:center;gap:1.25rem}
+        .desktop-nav{display:flex;align-items:center;gap:2rem}
         .mobile-nav-btn{display:none!important}
         @media(max-width:767px){
           .desktop-nav{display:none!important}
