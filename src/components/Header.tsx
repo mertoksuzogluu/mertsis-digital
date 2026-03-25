@@ -1,14 +1,25 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState, useEffect, type CSSProperties } from "react";
 import { siteConfig } from "@/config/site";
 import { Button } from "@/components/ui/Button";
 
 /** Navbar yüksekliği — mobil menü overlay hizası için aynı değer kullanılır */
-const HEADER_BAR_HEIGHT = "7.5rem";
+const HEADER_BAR_HEIGHT = "8.5rem";
+
+/** next/image yerine düz <img>: optimizasyon katmanı stilleri logo boyutunu sürekli bozuyordu */
+const logoImgStyle: CSSProperties = {
+  height: "clamp(5rem, 6.5vw, 7.5rem)",
+  width: "auto",
+  minWidth: "clamp(10rem, 28vw, 18rem)",
+  maxWidth: "min(92vw, 32rem)",
+  minHeight: "5rem",
+  objectFit: "contain",
+  objectPosition: "left center",
+  display: "block",
+};
 
 export function Header() {
   const pathname = usePathname();
@@ -63,14 +74,17 @@ export function Header() {
             }}
             aria-label="Mertsis Digital ana sayfa"
           >
-            <Image
+            {/* next/image sarmalayıcısı logo boyutunu bozduğu için düz img + inline boyut */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src="/logo.png"
               alt="Mertsis Digital"
               width={520}
               height={120}
-              priority
-              sizes="(max-width: 480px) 90vw, (max-width: 768px) 400px, 520px"
-              className="mertsis-logo"
+              className="mertsis-header-logo"
+              decoding="async"
+              fetchPriority="high"
+              style={logoImgStyle}
             />
           </Link>
 

@@ -195,17 +195,13 @@ header > div > a:first-of-type {
   align-items: center;
 }
 
-header > div > a:first-of-type .mertsis-logo {
-  display: inline-flex;
-  align-items: center;
-  line-height: 0;
-}
-
-header > div > a:first-of-type .mertsis-logo img {
-  height: clamp(4rem, 5.5vw, 6rem) !important;
+header > div > a:first-of-type img.mertsis-header-logo {
+  height: clamp(5rem, 6.5vw, 7.5rem) !important;
   width: auto !important;
-  max-width: min(92vw, 28rem);
+  min-width: clamp(10rem, 28vw, 18rem) !important;
+  max-width: min(92vw, 32rem) !important;
   object-fit: contain;
+  object-position: left center;
   display: block;
 }
 
