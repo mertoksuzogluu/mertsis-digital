@@ -6,15 +6,15 @@ import { useState, useEffect, type CSSProperties } from "react";
 import { siteConfig } from "@/config/site";
 import { Button } from "@/components/ui/Button";
 
-/** Navbar yüksekliği — mobil menü overlay hizası için aynı değer kullanılır */
-const HEADER_BAR_HEIGHT = "11rem";
+/** Kompakt navbar — mobil menü overlay `top` ile aynı */
+const HEADER_BAR_HEIGHT = "4.5rem";
 
-/** Beyaz cam şerit — `container-wide` ile aynı; viewport’ta yanlarda boşluk kalır */
-const HEADER_BAR_MAX = "min(100%, 80rem)";
+/** Beyaz şerit hero’dan dar; geniş ekranda bariz şerit */
+const HEADER_BAR_MAX = "min(100%, 56rem)";
 
 /** next/image yerine düz <img>: optimizasyon katmanı stilleri logo boyutunu sürekli bozuyordu */
-/** Kare kutu; kelime işaretini büyütmek için bar yüksekliğine yakın üst sınır + PNG boşluğu için hafif scale */
-const LOGO_BOX = "clamp(8rem, 12vw, 10.5rem)";
+/** Bar yüksekliğine sığan kare logo (eski 8–10.5rem kutu barı şişiriyordu) */
+const LOGO_BOX = "clamp(2.5rem, 5vw, 3rem)";
 const logoBoxStyle: CSSProperties = {
   width: LOGO_BOX,
   height: LOGO_BOX,
@@ -29,8 +29,6 @@ const logoImgStyle: CSSProperties = {
   objectFit: "contain",
   objectPosition: "left center",
   display: "block",
-  transform: "scale(1.12)",
-  transformOrigin: "left center",
 };
 
 export function Header() {
@@ -76,12 +74,12 @@ export function Header() {
             backdropFilter: "blur(16px)",
             WebkitBackdropFilter: "blur(16px)",
             borderBottom: "1px solid rgba(0,0,0,0.08)",
-            borderRadius: "0 0 14px 14px",
-            boxShadow: "0 8px 32px -12px rgba(15, 23, 42, 0.08)",
+            borderRadius: "0 0 12px 12px",
+            boxShadow: "0 4px 20px -8px rgba(15, 23, 42, 0.1)",
           }}
         >
           <div
-            className="flex w-full items-center justify-between gap-4 px-5 sm:px-6 lg:px-8"
+            className="flex w-full items-center justify-between gap-3 px-4 sm:px-5"
             style={{
               minHeight: HEADER_BAR_HEIGHT,
               boxSizing: "border-box",
@@ -255,7 +253,7 @@ export function Header() {
       )}
 
       <style dangerouslySetInnerHTML={{ __html: `
-        .desktop-nav{display:flex;align-items:center;gap:2rem}
+        .desktop-nav{display:flex;align-items:center;gap:1.25rem}
         .mobile-nav-btn{display:none!important}
         @media(max-width:767px){
           .desktop-nav{display:none!important}

@@ -190,14 +190,14 @@ header {
   box-sizing: border-box;
 }
 header > div {
-  max-width: 80rem;
+  max-width: 56rem;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
   background: color-mix(in srgb, var(--background) 92%, transparent);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
-  border-radius: 0 0 14px 14px;
+  border-radius: 0 0 12px 12px;
   box-sizing: border-box;
 }
 
