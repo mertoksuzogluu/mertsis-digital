@@ -7,18 +7,27 @@ import { siteConfig } from "@/config/site";
 import { Button } from "@/components/ui/Button";
 
 /** Navbar yüksekliği — mobil menü overlay hizası için aynı değer kullanılır */
-const HEADER_BAR_HEIGHT = "10rem";
+const HEADER_BAR_HEIGHT = "11rem";
 
 /** next/image yerine düz <img>: optimizasyon katmanı stilleri logo boyutunu sürekli bozuyordu */
+/** Kare kutu; kelime işaretini büyütmek için bar yüksekliğine yakın üst sınır + PNG boşluğu için hafif scale */
+const LOGO_BOX = "clamp(8rem, 12vw, 10.5rem)";
+const logoBoxStyle: CSSProperties = {
+  width: LOGO_BOX,
+  height: LOGO_BOX,
+  flexShrink: 0,
+  overflow: "hidden",
+  display: "block",
+  lineHeight: 0,
+};
 const logoImgStyle: CSSProperties = {
-  height: "clamp(6.25rem, 8vw, 9.5rem)",
-  width: "auto",
-  minWidth: "clamp(13rem, 34vw, 22rem)",
-  maxWidth: "min(94vw, 40rem)",
-  minHeight: "6.25rem",
+  width: "100%",
+  height: "100%",
   objectFit: "contain",
   objectPosition: "left center",
   display: "block",
+  transform: "scale(1.12)",
+  transformOrigin: "left center",
 };
 
 export function Header() {
@@ -74,18 +83,20 @@ export function Header() {
             }}
             aria-label="Mertsis Digital ana sayfa"
           >
-            {/* next/image sarmalayıcısı logo boyutunu bozduğu için düz img + inline boyut */}
+            {/* Küçük width/height = sadece 1:1 oran ipucu; gerçek boyutu logoBox belirler (FOUC önler) */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/logo.png"
-              alt="Mertsis Digital"
-              width={640}
-              height={160}
-              className="mertsis-header-logo"
-              decoding="async"
-              fetchPriority="high"
-              style={logoImgStyle}
-            />
+            <span style={logoBoxStyle}>
+              <img
+                src="/logo.png"
+                alt="Mertsis Digital"
+                width={128}
+                height={128}
+                className="mertsis-header-logo"
+                decoding="async"
+                fetchPriority="high"
+                style={logoImgStyle}
+              />
+            </span>
           </Link>
 
           {/* Desktop nav */}

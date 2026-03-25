@@ -33,7 +33,7 @@ header {
   background: var(--bg);
   border-bottom: 1px solid var(--bor);
   padding: 0 1.25rem;
-  min-height: 10rem;
+  min-height: 11rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -86,10 +86,11 @@ p { color: var(--mut); margin: 0 0 0.5rem 0; line-height: 1.6; }
 img { max-width: 100%; height: auto; display: block; }
 
 img.mertsis-header-logo {
-  height: clamp(6.25rem, 8vw, 9.5rem) !important;
-  width: auto !important;
-  min-width: clamp(13rem, 34vw, 22rem) !important;
-  max-width: min(94vw, 40rem) !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  max-height: none !important;
   object-fit: contain;
   object-position: left center;
 }
