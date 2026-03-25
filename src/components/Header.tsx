@@ -6,15 +6,15 @@ import { useState, useEffect, type CSSProperties } from "react";
 import { siteConfig } from "@/config/site";
 import { Button } from "@/components/ui/Button";
 
-/** Kompakt navbar — mobil menü overlay `top` ile aynı */
-const HEADER_BAR_HEIGHT = "4.5rem";
+/** Navbar — kompakt ama wordmark okunaklı; mobil overlay `top` ile aynı */
+const HEADER_BAR_HEIGHT = "5.25rem";
 
 /** Beyaz şerit hero’dan dar; geniş ekranda bariz şerit */
 const HEADER_BAR_MAX = "min(100%, 56rem)";
 
 /** next/image yerine düz <img>: optimizasyon katmanı stilleri logo boyutunu sürekli bozuyordu */
-/** Bar yüksekliğine sığan kare logo (eski 8–10.5rem kutu barı şişiriyordu) */
-const LOGO_BOX = "clamp(2.5rem, 5vw, 3rem)";
+/** Logo bar içinde mümkün olduğunca büyük; bar 11rem’e dönmeden */
+const LOGO_BOX = "clamp(3.25rem, 7.5vw, 4.25rem)";
 const logoBoxStyle: CSSProperties = {
   width: LOGO_BOX,
   height: LOGO_BOX,
