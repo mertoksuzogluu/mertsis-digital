@@ -9,8 +9,8 @@ import { Button } from "@/components/ui/Button";
 /** Navbar yüksekliği — mobil menü overlay hizası için aynı değer kullanılır */
 const HEADER_BAR_HEIGHT = "11rem";
 
-/** Sayfa gövdesi `container-wide` 80rem; üst bar bariz şekilde dar — inline maxWidth CSS yükleme sırasına takılmasın */
-const HEADER_CONTENT_MAX = "min(100%, 56rem)";
+/** Beyaz cam şerit — `container-wide` ile aynı; viewport’ta yanlarda boşluk kalır */
+const HEADER_BAR_MAX = "min(100%, 80rem)";
 
 /** next/image yerine düz <img>: optimizasyon katmanı stilleri logo boyutunu sürekli bozuyordu */
 /** Kare kutu; kelime işaretini büyütmek için bar yüksekliğine yakın üst sınır + PNG boşluğu için hafif scale */
@@ -58,27 +58,35 @@ export function Header() {
           top: 0,
           zIndex: 50,
           width: "100%",
-          borderBottom: "1px solid rgba(0,0,0,0.08)",
-          background: "rgba(255,255,255,0.92)",
-          backdropFilter: "blur(16px)",
-          WebkitBackdropFilter: "blur(16px)",
+          boxSizing: "border-box",
+          paddingLeft: "clamp(0.75rem, 3vw, 1.5rem)",
+          paddingRight: "clamp(0.75rem, 3vw, 1.5rem)",
+          background: "transparent",
         }}
         role="banner"
       >
         <div
-          className="container-header"
           style={{
-            display: "flex",
-            minHeight: HEADER_BAR_HEIGHT,
-            alignItems: "center",
-            justifyContent: "space-between",
-            gap: "1rem",
+            maxWidth: HEADER_BAR_MAX,
             width: "100%",
-            maxWidth: HEADER_CONTENT_MAX,
             marginLeft: "auto",
             marginRight: "auto",
+            boxSizing: "border-box",
+            background: "rgba(255,255,255,0.92)",
+            backdropFilter: "blur(16px)",
+            WebkitBackdropFilter: "blur(16px)",
+            borderBottom: "1px solid rgba(0,0,0,0.08)",
+            borderRadius: "0 0 14px 14px",
+            boxShadow: "0 8px 32px -12px rgba(15, 23, 42, 0.08)",
           }}
         >
+          <div
+            className="flex w-full items-center justify-between gap-4 px-5 sm:px-6 lg:px-8"
+            style={{
+              minHeight: HEADER_BAR_HEIGHT,
+              boxSizing: "border-box",
+            }}
+          >
           <Link
             href="/"
             style={{
@@ -178,6 +186,7 @@ export function Header() {
               }} />
             </div>
           </button>
+          </div>
         </div>
       </header>
 

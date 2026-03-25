@@ -167,22 +167,6 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
   .container-wide { padding-left: 2rem; padding-right: 2rem; }
 }
 
-/* Navbar — gövdeden belirgin dar (56rem ≈ max-w-4xl) */
-.container-header {
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  max-width: min(100%, 56rem);
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
-@media (min-width: 640px) {
-  .container-header { padding-left: 1.5rem; padding-right: 1.5rem; }
-}
-@media (min-width: 1024px) {
-  .container-header { padding-left: 2rem; padding-right: 2rem; }
-}
-
 .container-narrow {
   margin-left: auto;
   margin-right: auto;
@@ -198,20 +182,32 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
   .container-narrow { padding-left: 2rem; padding-right: 2rem; }
 }
 
-/* Header */
+/* Header — dış tam genişlik şeffaf; beyaz şerit iç div’de (Header.tsx ile uyumlu) */
 header {
+  background: transparent;
+  padding-left: clamp(0.75rem, 3vw, 1.5rem);
+  padding-right: clamp(0.75rem, 3vw, 1.5rem);
+  box-sizing: border-box;
+}
+header > div {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
   background: color-mix(in srgb, var(--background) 92%, transparent);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
+  border-radius: 0 0 14px 14px;
+  box-sizing: border-box;
 }
 
 /* Logo (header içindeki ilk link) */
-header > div > a:first-of-type {
+header > div > div > a:first-of-type {
   display: flex;
   align-items: center;
 }
 
-header > div > a:first-of-type img.mertsis-header-logo {
+header > div > div > a:first-of-type img.mertsis-header-logo {
   width: 100% !important;
   height: 100% !important;
   min-width: 0 !important;

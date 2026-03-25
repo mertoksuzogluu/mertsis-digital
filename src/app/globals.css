@@ -51,10 +51,6 @@
   .container-wide {
     @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8;
   }
-  /* Sadece navbar — gövde 7xl (80rem); burası 4xl (56rem) + Header.tsx inline ile aynı */
-  .container-header {
-    @apply mx-auto w-full max-w-4xl px-5 sm:px-6 lg:px-8;
-  }
 }
 
 /* Subtle selection */

@@ -30,16 +30,33 @@ main { background: var(--bg); color: var(--fg); flex: 1 1 0%; }
 a { color: inherit; text-decoration: none !important; }
 a:hover { color: var(--acc); opacity: 0.9; }
 header {
-  background: var(--bg);
-  border-bottom: 1px solid var(--bor);
-  padding: 0 1.25rem;
-  min-height: 11rem;
+  background: transparent;
+  padding: 0 clamp(0.75rem, 3vw, 1.5rem);
+  box-sizing: border-box;
+  display: block;
+}
+header > div {
+  max-width: 80rem;
+  width: 100%;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 0 0 14px 14px;
+  box-sizing: border-box;
+}
+header > div > div {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  min-height: 11rem;
+  gap: 1rem;
+  padding: 0 1.25rem;
+  box-sizing: border-box;
 }
-header > div { display: flex; align-items: center; justify-content: space-between; width: 100%; max-width: min(100%, 56rem); margin: 0 auto; }
-header > div > a:first-of-type { font-size: 1.125rem; font-weight: 600; color: var(--fg); }
+header > div > div > a:first-of-type { font-size: 1.125rem; font-weight: 600; color: var(--fg); }
 nav { display: flex; align-items: center; gap: 2rem; }
 nav a { font-size: 0.875rem; font-weight: 400 !important; color: var(--fg); }
 nav a:hover { color: var(--acc); }
