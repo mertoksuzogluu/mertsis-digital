@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { siteConfig } from "@/config/site";
@@ -51,15 +52,23 @@ export function Header() {
           <Link
             href="/"
             style={{
-              fontSize: "1.125rem",
-              fontWeight: 700,
-              letterSpacing: "-0.025em",
-              color: "#0a0a0a",
+              display: "flex",
+              alignItems: "center",
               textDecoration: "none",
+              color: "#0a0a0a",
             }}
             aria-label="Mertsis Digital ana sayfa"
           >
-            Mertsis Digital
+            <Image
+              src="/logo.png"
+              alt="Mertsis Digital"
+              width={190}
+              height={44}
+              priority
+              sizes="(max-width: 768px) 160px, 190px"
+              className="mertsis-logo"
+              style={{ height: "2rem", width: "auto" }}
+            />
           </Link>
 
           {/* Desktop nav */}

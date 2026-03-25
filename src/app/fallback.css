@@ -189,11 +189,16 @@ header {
   border-bottom: 1px solid var(--border);
 }
 
-/* Sadece logo (header içindeki ilk link) büyük ve semibold */
+/* Logo (header içindeki ilk link) */
 header > div > a:first-of-type {
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: var(--foreground);
+  display: flex;
+  align-items: center;
+}
+
+header > div > a:first-of-type .mertsis-logo {
+  height: 2rem;
+  width: auto;
+  display: block;
 }
 
 nav a {
