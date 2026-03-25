@@ -9,6 +9,9 @@ import { Button } from "@/components/ui/Button";
 /** Navbar yüksekliği — mobil menü overlay hizası için aynı değer kullanılır */
 const HEADER_BAR_HEIGHT = "11rem";
 
+/** Sayfa gövdesi `container-wide` 80rem; üst bar bariz şekilde dar — inline maxWidth CSS yükleme sırasına takılmasın */
+const HEADER_CONTENT_MAX = "min(100%, 56rem)";
+
 /** next/image yerine düz <img>: optimizasyon katmanı stilleri logo boyutunu sürekli bozuyordu */
 /** Kare kutu; kelime işaretini büyütmek için bar yüksekliğine yakın üst sınır + PNG boşluğu için hafif scale */
 const LOGO_BOX = "clamp(8rem, 12vw, 10.5rem)";
@@ -70,6 +73,10 @@ export function Header() {
             alignItems: "center",
             justifyContent: "space-between",
             gap: "1rem",
+            width: "100%",
+            maxWidth: HEADER_CONTENT_MAX,
+            marginLeft: "auto",
+            marginRight: "auto",
           }}
         >
           <Link

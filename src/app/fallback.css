@@ -167,12 +167,12 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
   .container-wide { padding-left: 2rem; padding-right: 2rem; }
 }
 
-/* Navbar — container-wide'dan bir tık dar (72rem) */
+/* Navbar — gövdeden belirgin dar (56rem ≈ max-w-4xl) */
 .container-header {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  max-width: 72rem;
+  max-width: min(100%, 56rem);
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
