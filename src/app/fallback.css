@@ -196,8 +196,10 @@ header > div > a:first-of-type {
 }
 
 header > div > a:first-of-type .mertsis-logo {
-  height: 3rem;
+  height: clamp(3rem, 12vw, 4.5rem);
   width: auto;
+  max-width: min(92vw, 28rem);
+  object-fit: contain;
   display: block;
 }
 

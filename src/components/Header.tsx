@@ -7,6 +7,9 @@ import { useState, useEffect } from "react";
 import { siteConfig } from "@/config/site";
 import { Button } from "@/components/ui/Button";
 
+/** Navbar yüksekliği — mobil menü overlay hizası için aynı değer kullanılır */
+const HEADER_BAR_HEIGHT = "5.75rem";
+
 export function Header() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -43,7 +46,7 @@ export function Header() {
           className="container-wide"
           style={{
             display: "flex",
-            height: "4rem",
+            minHeight: HEADER_BAR_HEIGHT,
             alignItems: "center",
             justifyContent: "space-between",
             gap: "1rem",
@@ -54,20 +57,26 @@ export function Header() {
             style={{
               display: "flex",
               alignItems: "center",
+              flexShrink: 0,
               textDecoration: "none",
               color: "#0a0a0a",
             }}
             aria-label="Mertsis Digital ana sayfa"
           >
             <Image
-              src="/logo.png"
+              src="/logo-dark.png"
               alt="Mertsis Digital"
-              width={285}
-              height={64}
+              width={520}
+              height={120}
               priority
-              sizes="(max-width: 768px) 240px, 285px"
+              sizes="(max-width: 480px) 85vw, (max-width: 768px) 360px, 520px"
               className="mertsis-logo"
-              style={{ height: "3.65rem", width: "auto" }}
+              style={{
+                height: "clamp(3rem, 12vw, 4.5rem)",
+                width: "auto",
+                maxWidth: "min(92vw, 28rem)",
+                objectFit: "contain",
+              }}
             />
           </Link>
 
@@ -152,7 +161,7 @@ export function Header() {
           style={{
             position: "fixed",
             inset: 0,
-            top: "4rem",
+            top: HEADER_BAR_HEIGHT,
             zIndex: 49,
             background: "rgba(255,255,255,0.97)",
             backdropFilter: "blur(20px)",
