@@ -62,12 +62,12 @@ export function Header() {
             <Image
               src="/logo.png"
               alt="Mertsis Digital"
-              width={230}
-              height={52}
+              width={285}
+              height={64}
               priority
-              sizes="(max-width: 768px) 200px, 230px"
+              sizes="(max-width: 768px) 240px, 285px"
               className="mertsis-logo"
-              style={{ height: "3rem", width: "auto" }}
+              style={{ height: "3.65rem", width: "auto" }}
             />
           </Link>
 
