@@ -54,7 +54,7 @@ export function Footer() {
                 lineHeight: 1.5,
               }}
             >
-              Premium kreatif + performans ile markanı büyüt. İstanbul, Türkiye.
+              Yazılım ürünleri, PDKS ve operasyon sistemleri. İstanbul, Türkiye.
             </p>
           </div>
 

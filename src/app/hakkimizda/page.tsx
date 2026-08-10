@@ -5,7 +5,7 @@ import { PageHero } from "@/components/PageHero";
 export const metadata: Metadata = {
   title: "Hakkımızda",
   description:
-    "Mertsis Digital — Premium kreatif ve performans odaklı dijital ajans. İstanbul merkezli, Türkiye ve global projeler.",
+    "Mertsis Digital — PDKS, web panelleri ve özel yazılım odaklı ekip. İstanbul merkezli.",
 };
 
 export default function HakkimizdaPage() {
@@ -13,31 +13,33 @@ export default function HakkimizdaPage() {
     <>
       <PageHero
         title="Hakkımızda"
-        subtitle="Dijitalde tasarlıyor, geliştiriyor ve ölçekliyoruz."
+        subtitle="Operasyonu yazılımla sadeleştiriyor, gerektiğinde büyümeyi destekliyoruz."
       />
       <div style={{ padding: "3rem 1.25rem 4rem" }}>
         <div className="container-narrow" style={{ maxWidth: "48rem", margin: "0 auto" }}>
           <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem", fontSize: "1rem", lineHeight: 1.7, color: "#52525b" }}>
             <p style={{ margin: 0 }}>
-              Mertsis Digital, markaların dijital büyümesini tek bir ekiple yönetmek isteyenler için
-              kuruldu. Sosyal medya, performans pazarlaması, içerik üretimi, web ve 3D deneyimini
-              bir araya getirerek hem kreatif kalite hem de ölçülebilir sonuç odaklı çalışıyoruz.
+              Mertsis Digital, işletmelerin sahadaki ve ofisteki süreçlerini yazılım
+              ürünleriyle yönetmesi için kuruldu. PDKS (personel devam kontrol), web
+              panelleri, kiosk / mobil uygulamalar ve özel yazılım geliştirmede
+              odaklanıyoruz.
             </p>
             <p style={{ margin: 0 }}>
-              İstanbul merkezli ekibimiz, e-ticaret, kurumsal ve hizmet sektöründe yerel ve global
-              projeler yürütüyor. Strateji aşamasından teslimata kadar süreci şeffaf ve veri odaklı
-              yönetiyoruz.
+              Kreatif, içerik ve performans pazarlaması yan hizmetimiz; ürün
+              lansmanı veya büyüme ihtiyacı olduğunda devreye girer. Ana vaadimiz
+              ölçülebilir operasyon ve yazılım.
             </p>
             <p style={{ margin: 0 }}>
-              İhtiyacınızı anlattığınızda, 24 saat içinde teklif ve yol haritası çıkarıyoruz.
+              İstanbul merkezli ekibimiz, keşiften yayına kadar süreci şeffaf yönetir.
+              İhtiyacınızı anlattığınızda 24 saat içinde teklif ve yol haritası çıkarırız.
             </p>
           </div>
           <div style={{ marginTop: "2.5rem", display: "flex", flexWrap: "wrap", gap: "0.75rem" }}>
             <Button href="/iletisim" variant="primary" size="md">
               İletişime Geç
             </Button>
-            <Button href="/projeler" variant="secondary" size="md">
-              Projeleri İncele
+            <Button href="/hizmetler" variant="secondary" size="md">
+              Hizmetleri Gör
             </Button>
           </div>
         </div>

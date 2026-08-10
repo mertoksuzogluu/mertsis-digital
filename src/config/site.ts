@@ -5,7 +5,7 @@
 
 export const siteConfig = {
   name: "Mertsis Digital",
-  tagline: "Premium Kreatif + Performans ile Markanı Büyüt.",
+  tagline: "Yazılım ürünleri ve operasyon sistemleriyle işini büyüt.",
   locale: "tr",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://mertsisdigital.com",
 

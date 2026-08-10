@@ -28,7 +28,7 @@ export default function HomePage() {
           <SectionHeading
             id="hizmetler-heading"
             title="Hizmetler"
-            subtitle="Sosyal medya, performans, içerik, web ve 3D — tek ekip."
+            subtitle="PDKS, web panelleri ve özel yazılım önde — kreatif ve performans destekleyici."
           />
           <ServiceCards services={services} />
         </div>

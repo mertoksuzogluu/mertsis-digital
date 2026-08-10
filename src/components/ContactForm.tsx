@@ -14,11 +14,12 @@ const BUDGET_OPTIONS = [
 ];
 
 const SERVICE_OPTIONS = [
-  "Sosyal Medya Yönetimi",
+  "PDKS & Personel Yazılımı",
+  "Web & Özel Yazılım",
+  "3D Configurator",
   "Performans Pazarlaması (Meta Ads)",
   "İçerik Üretimi",
-  "Web Tasarım & Yazılım",
-  "3D Configurator",
+  "Sosyal Medya Yönetimi",
   "Marka Kimliği",
   "Analitik & CRO",
 ];

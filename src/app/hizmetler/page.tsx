@@ -7,7 +7,7 @@ import { PageHero } from "@/components/PageHero";
 export const metadata: Metadata = {
   title: "Hizmetler",
   description:
-    "Sosyal medya, Meta reklamları, içerik, web, 3D configurator, marka kimliği ve CRO. Mertsis Digital.",
+    "PDKS, web & özel yazılım, 3D configurator; destekleyici performans, içerik ve sosyal medya. Mertsis Digital.",
 };
 
 export default function HizmetlerPage() {
@@ -15,7 +15,7 @@ export default function HizmetlerPage() {
     <>
       <PageHero
         title="Hizmetler"
-        subtitle="Strateji, kreatif ve performans — tek ekip."
+        subtitle="Önce yazılım ve operasyon ürünleri — sonra büyüme desteği."
       />
       <div style={{ padding: "3rem 1.25rem 4rem" }}>
         <div className="container-narrow" style={{ maxWidth: "64rem", margin: "0 auto" }}>

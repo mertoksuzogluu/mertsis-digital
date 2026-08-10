@@ -13,18 +13,19 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Mertsis Digital | Premium Dijital Ajans",
+    default: "Mertsis Digital | Yazılım & Operasyon Ürünleri",
     template: "%s | Mertsis Digital",
   },
   description:
-    "Sosyal medya yönetimi, Meta reklamları, içerik üretimi, web tasarım ve 3D configurator çözümlerini tek bir yüksek performans ekiple sunuyoruz. İstanbul, Türkiye.",
+    "PDKS, web panelleri ve özel yazılım geliştiriyoruz. İhtiyaç olursa performans reklamı ve içerikle büyümeyi destekliyoruz. İstanbul, Türkiye.",
   keywords: [
-    "dijital ajans",
-    "sosyal medya yönetimi",
-    "Meta reklamları",
-    "web tasarım",
+    "PDKS",
+    "personel devam kontrol",
+    "yazılım geliştirme",
+    "web panel",
+    "kiosk uygulaması",
+    "NFC QR giriş",
     "3D configurator",
-    "performans pazarlaması",
     "İstanbul",
   ],
   authors: [{ name: "Mertsis Digital" }],
@@ -33,9 +34,9 @@ export const metadata: Metadata = {
     locale: "tr_TR",
     url: "https://mertsisdigital.com",
     siteName: "Mertsis Digital",
-    title: "Mertsis Digital | Premium Dijital Ajans",
+    title: "Mertsis Digital | Yazılım & Operasyon Ürünleri",
     description:
-      "Premium kreatif + performans ile markanı büyüt. Sosyal medya, Meta Ads, içerik, web ve 3D çözümleri.",
+      "PDKS, web ve özel yazılım ürünleriyle operasyonunu dijitalleştir. Kreatif ve performans destekleyici.",
     images: [
       {
         url: "/logo.png",
@@ -47,8 +48,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mertsis Digital | Premium Dijital Ajans",
-    description: "Premium kreatif + performans ile markanı büyüt.",
+    title: "Mertsis Digital | Yazılım & Operasyon Ürünleri",
+    description: "PDKS, web panelleri ve özel yazılım çözümleri.",
     images: ["/logo.png"],
   },
   robots: {

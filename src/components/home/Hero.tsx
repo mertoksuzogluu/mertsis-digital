@@ -4,13 +4,13 @@ import { Button } from "@/components/ui/Button";
 import { siteConfig } from "@/config/site";
 
 const stats = [
-  { value: "%180", label: "ROAS Artışı" },
-  { value: "2.1M", label: "Video İzlenme" },
+  { value: "PDKS", label: "Kiosk + Mobil + Panel" },
+  { value: "7/24", label: "Operasyon Takibi" },
   { value: "%98", label: "Mobil Skor" },
 ];
 
 const floatingTags = [
-  "Meta Ads", "Sosyal Medya", "SEO", "3D", "Web", "İçerik", "CRO",
+  "PDKS", "Kiosk", "NFC", "Web", "Panel", "Mobil", "3D", "Meta Ads",
 ];
 
 export function Hero() {
@@ -79,17 +79,17 @@ export function Hero() {
             color: "#0a0a0a",
             margin: 0,
           }}>
-            Premium Kreatif +{" "}
+            Yazılım &amp;{" "}
             <span style={{
               background: "linear-gradient(135deg, #2563eb, #7c3aed)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
             }}>
-              Performans
+              Operasyon
             </span>
             <br />
-            ile Markanı Büyüt.
+            Ürünleriyle Büyü.
           </h1>
 
           <p style={{
@@ -99,8 +99,8 @@ export function Hero() {
             color: "#52525b",
             maxWidth: "520px",
           }}>
-            Sosyal medya, Meta reklamları, içerik üretimi, web tasarım ve 3D configurator çözümlerini
-            tek bir yüksek performans ekiple sunuyoruz.
+            PDKS, web panelleri ve özel yazılımlar geliştiriyoruz. İhtiyaç olursa
+            performans reklamı ve içerikle ürününüzü pazara taşıyoruz.
           </p>
 
           <div style={{ marginTop: "2rem", display: "flex", flexWrap: "wrap", gap: "0.75rem" }}>
@@ -160,9 +160,9 @@ export function Hero() {
           }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.75rem" }}>
               <span style={{ fontSize: "0.75rem", fontWeight: 600, color: "#2563eb", textTransform: "uppercase", letterSpacing: "0.05em" }}>
-                Meta Ads Performans
+                PDKS Terminal
               </span>
-              <span style={{ fontSize: "0.75rem", color: "#16a34a", fontWeight: 600 }}>+180%</span>
+              <span style={{ fontSize: "0.75rem", color: "#16a34a", fontWeight: 600 }}>Canlı</span>
             </div>
             {/* Mini bar chart */}
             <div style={{ display: "flex", alignItems: "flex-end", gap: "4px", height: "48px" }}>
@@ -189,7 +189,7 @@ export function Hero() {
             animation: "heroCardFloat 6s ease-in-out infinite 1s",
           }}>
             <div style={{ fontSize: "0.75rem", fontWeight: 600, color: "#0a0a0a", marginBottom: "0.75rem" }}>
-              Hizmetler
+              Odak
             </div>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
               {floatingTags.map((tag) => (
@@ -229,10 +229,10 @@ export function Hero() {
               </div>
               <div>
                 <div style={{ fontSize: "0.875rem", fontWeight: 600, color: "#0a0a0a" }}>
-                  &ldquo;ROAS ciddi şekilde arttı.&rdquo;
+                  &ldquo;Giriş-çıkış artık net ve hızlı.&rdquo;
                 </div>
                 <div style={{ fontSize: "0.75rem", color: "#71717a" }}>
-                  Dijital Pazarlama Müdürü
+                  Operasyon Yöneticisi
                 </div>
               </div>
             </div>

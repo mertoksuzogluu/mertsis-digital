@@ -1,6 +1,7 @@
-# Mertsis Digital — Premium Dijital Ajans Web Sitesi
+# Mertsis Digital — Yazılım & Operasyon Ürünleri Web Sitesi
 
-Next.js 14 (App Router), TypeScript, Tailwind CSS ve Framer Motion ile geliştirilmiş, dönüşüm odaklı kurumsal ajans sitesi.
+Next.js (App Router), TypeScript ve Tailwind ile geliştirilmiş kurumsal site.
+Odak: PDKS, web panelleri ve özel yazılım; kreatif/pazarlama destekleyici.
 
 ## Çalıştırma
 

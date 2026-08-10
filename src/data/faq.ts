@@ -5,33 +5,33 @@ export interface FAQItem {
 
 export const faqItems: FAQItem[] = [
   {
+    question: "PDKS / yazılım projeleri nasıl fiyatlanır?",
+    answer:
+      "Kapsama göre proje bazlı veya aylık bakım/retainer ile çalışıyoruz. Kiosk sayısı, şube, mobil uygulama ve özel entegrasyonlar teklifi belirler. İlk görüşmede ihtiyaç netleşince bütçe aralığını paylaşıyoruz.",
+  },
+  {
+    question: "PDKS kurulumu ne kadar sürer?",
+    answer:
+      "Standart kurulumda firma, şube, personel ve terminal aktivasyonu birkaç gün içinde ayağa kalkabilir. Özel rapor, entegrasyon veya donanım (NFC tablet/kiosk) süreyi uzatır; net takvim teklifte yazılır.",
+  },
+  {
+    question: "Sadece yazılım, pazarlama istemiyoruz — olur mu?",
+    answer:
+      "Evet. Ana odağımız yazılım ve operasyon ürünleri. Sosyal medya ve reklam, ürün lansmanı veya büyüme ihtiyacı olduğunda opsiyonel destek olarak sunulur.",
+  },
+  {
     question: "Fiyatlandırma nasıl?",
     answer:
-      "Proje bazlı veya aylık retainer şeklinde çalışıyoruz. İhtiyacınıza göre teklif hazırlıyoruz; ilk görüşmede kapsam ve bütçe aralığını netleştiriyoruz. Reklam bütçesi (Meta vb.) ayrıdır ve müşteri tarafından yönetilir veya birlikte belirlenir.",
+      "Yazılımda proje + bakım; pazarlama tarafında aylık retainer veya proje bazlı model kullanıyoruz. Reklam medya bütçesi (Meta vb.) ayrıdır ve müşteriye aittir.",
   },
   {
-    question: "Minimum çalışma süresi var mı?",
+    question: "Web / panel teslim süresi?",
     answer:
-      "Sosyal medya ve performans pazarlaması için genelde 3 ay minimum öneriyoruz; sonuçların ölçülebilmesi için bu süre önemli. Web projeleri ve tek seferlik içerik üretiminde minimum süre yoktur.",
-  },
-  {
-    question: "İçerik üretim süreci nasıl?",
-    answer:
-      "Brief ve marka kılavuzu ile başlıyoruz. Konsept onayından sonra çekim/çizim aşamasına geçiyoruz. Taslak onayı ve revizyon turu ile teslim ediyoruz. Süre proje kapsamına göre 1–4 hafta arasında değişir.",
-  },
-  {
-    question: "Meta reklam bütçesi ayrı mı?",
-    answer:
-      "Evet. Meta (Facebook/Instagram) reklam harcamaları müşteri bütçesidir; ajans yönetim ücreti ayrıdır. Kampanya stratejisi, kreatif ve optimizasyon bizden; reklam harcaması sizin tarafınızdan platforma yatırılır.",
-  },
-  {
-    question: "Web sitesi teslim süresi?",
-    answer:
-      "Kurumsal tek sayfa veya küçük siteler için yaklaşık 3–6 hafta, daha büyük ve entegrasyonlu projeler için 6–12 hafta planlıyoruz. Net süre kapsam netleştikten sonra teklifte belirtilir.",
+      "Kurumsal site veya küçük paneller için yaklaşık 3–6 hafta, PDKS benzeri çok yüzeyli ürünlerde 6–12 hafta planlıyoruz. Süre kapsam netleştikten sonra teklifte belirtilir.",
   },
   {
     question: "Sizden neye ihtiyacımız var?",
     answer:
-      "Marka bilgileri (logo, renkler, ton), hedefler ve rakipler hakkında kısa brief; web projelerinde içerik ve varsa mevcut site; reklam projelerinde erişim (Meta Business Manager, reklam hesabı). İlk görüşmede tam liste paylaşılır.",
+      "Yazılımda süreç özeti, kullanıcı rolleri ve varsa mevcut Excel/sistemler; marka tarafında logo ve ton. PDKS için şube listesi, personel yapısı ve terminal lokasyonları yeterlidir. İlk görüşmede tam checklist paylaşılır.",
   },
 ];
