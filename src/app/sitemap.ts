@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { siteConfig } from "@/config/site";
 import { caseStudies } from "@/data/caseStudies";
+import { services } from "@/data/services";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteConfig.url;
@@ -15,6 +16,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/kullanim-sartlari`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
   ];
 
+  const servicePages: MetadataRoute.Sitemap = services.map((s) => ({
+    url: `${base}/hizmetler/${s.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: s.group === "primary" ? 0.9 : 0.7,
+  }));
+
   const projectPages: MetadataRoute.Sitemap = caseStudies.map((c) => ({
     url: `${base}/projeler/${c.slug}`,
     lastModified: new Date(),
@@ -22,5 +30,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticPages, ...projectPages];
+  return [...staticPages, ...servicePages, ...projectPages];
 }

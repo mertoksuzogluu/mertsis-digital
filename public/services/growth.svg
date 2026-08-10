@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" rx="16" fill="#FAFAFA"/>
+  <rect x="80" y="80" width="640" height="280" rx="12" fill="#fff" stroke="#E4E4E7"/>
+  <rect x="120" y="140" width="160" height="100" rx="10" fill="#F4F4F5"/>
+  <rect x="320" y="140" width="160" height="100" rx="10" fill="#F4F4F5"/>
+  <rect x="520" y="140" width="160" height="100" rx="10" fill="#F4F4F5"/>
+  <rect x="140" y="170" width="80" height="10" rx="5" fill="#A1A1AA"/>
+  <rect x="340" y="170" width="80" height="10" rx="5" fill="#A1A1AA"/>
+  <rect x="540" y="170" width="80" height="10" rx="5" fill="#A1A1AA"/>
+  <text x="80" y="420" fill="#18181B" font-family="system-ui,sans-serif" font-size="22" font-weight="700">Büyüme destei</text>
+  <text x="80" y="448" fill="#71717A" font-family="system-ui,sans-serif" font-size="14">Kreatif · Reklam · Analitik</text>
+</svg>

@@ -30,7 +30,7 @@ export default function HomePage() {
             title="Hizmetler"
             subtitle="PDKS, web panelleri ve özel yazılım önde — kreatif ve performans destekleyici."
           />
-          <ServiceCards services={services} />
+          <ServiceCards services={services} splitGroups />
         </div>
       </section>
 

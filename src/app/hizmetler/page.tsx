@@ -19,7 +19,7 @@ export default function HizmetlerPage() {
       />
       <div style={{ padding: "3rem 1.25rem 4rem" }}>
         <div className="container-narrow" style={{ maxWidth: "64rem", margin: "0 auto" }}>
-          <ServiceCards services={services} />
+          <ServiceCards services={services} splitGroups />
           <div style={{ marginTop: "3rem", textAlign: "center" }}>
             <p style={{ fontSize: "0.875rem", color: "#52525b", marginBottom: "1rem" }}>
               Projenize uygun teklif için iletişime geçin.

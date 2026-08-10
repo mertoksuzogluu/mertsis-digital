@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" rx="16" fill="#F8FAFF"/>
+  <rect x="120" y="60" width="560" height="320" rx="16" fill="#fff" stroke="#E2E8F0"/>
+  <ellipse cx="400" cy="220" rx="140" ry="90" fill="#DBEAFE"/>
+  <ellipse cx="400" cy="220" rx="90" ry="55" fill="#93C5FD"/>
+  <ellipse cx="400" cy="220" rx="40" ry="25" fill="#2563EB"/>
+  <rect x="300" y="320" width="200" height="28" rx="8" fill="#F1F5F9"/>
+  <text x="120" y="440" fill="#0F172A" font-family="system-ui,sans-serif" font-size="22" font-weight="700">3D Configurator</text>
+  <text x="120" y="468" fill="#64748B" font-family="system-ui,sans-serif" font-size="14">Ürün deneyimi · WebGL</text>
+</svg>

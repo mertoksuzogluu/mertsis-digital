@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="520" viewBox="0 0 720 520" fill="none">
+  <rect width="720" height="520" rx="16" fill="#EEF2FF"/>
+  <rect x="24" y="28" width="420" height="280" rx="12" fill="#fff" stroke="#E2E8F0"/>
+  <rect x="40" y="44" width="120" height="12" rx="6" fill="#2563EB"/>
+  <rect x="40" y="68" width="200" height="8" rx="4" fill="#CBD5E1"/>
+  <rect x="40" y="100" width="180" height="72" rx="8" fill="#F1F5F9"/>
+  <rect x="232" y="100" width="180" height="72" rx="8" fill="#F1F5F9"/>
+  <rect x="52" y="116" width="48" height="8" rx="4" fill="#94A3B8"/>
+  <rect x="52" y="134" width="80" height="16" rx="4" fill="#0F172A"/>
+  <rect x="244" y="116" width="48" height="8" rx="4" fill="#94A3B8"/>
+  <rect x="244" y="134" width="80" height="16" rx="4" fill="#16A34A"/>
+  <rect x="40" y="190" width="372" height="96" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <rect x="56" y="210" width="60" height="8" rx="4" fill="#94A3B8"/>
+  <rect x="56" y="230" width="40" height="40" rx="4" fill="#BFDBFE"/>
+  <rect x="108" y="230" width="40" height="40" rx="4" fill="#93C5FD"/>
+  <rect x="160" y="230" width="40" height="40" rx="4" fill="#60A5FA"/>
+  <rect x="212" y="230" width="40" height="40" rx="4" fill="#3B82F6"/>
+  <rect x="264" y="230" width="40" height="40" rx="4" fill="#2563EB"/>
+  <rect x="316" y="230" width="40" height="40" rx="4" fill="#1D4ED8"/>
+  <text x="40" y="330" fill="#64748B" font-family="system-ui,sans-serif" font-size="13" font-weight="600">Yönetim paneli</text>
+
+  <rect x="480" y="48" width="200" height="340" rx="20" fill="#0F172A"/>
+  <rect x="496" y="72" width="168" height="260" rx="8" fill="#1E293B"/>
+  <rect x="520" y="100" width="120" height="120" rx="8" fill="#fff"/>
+  <rect x="545" y="125" width="70" height="70" rx="4" fill="#E2E8F0"/>
+  <rect x="560" y="140" width="40" height="40" fill="none" stroke="#2563EB" stroke-width="4"/>
+  <rect x="512" y="240" width="136" height="28" rx="6" fill="#2563EB"/>
+  <text x="542" y="258" fill="#fff" font-family="system-ui,sans-serif" font-size="11" font-weight="600">Giri_ · QR</text>
+  <rect x="512" y="280" width="136" height="28" rx="6" fill="#334155"/>
+  <circle cx="580" cy="368" r="10" fill="#334155"/>
+  <text x="480" y="410" fill="#64748B" font-family="system-ui,sans-serif" font-size="13" font-weight="600">Kiosk terminal</text>
+
+  <rect x="24" y="360" width="420" height="120" rx="12" fill="#fff" stroke="#E2E8F0"/>
+  <text x="40" y="390" fill="#0F172A" font-family="system-ui,sans-serif" font-size="14" font-weight="700">Bugün · 128 giri_</text>
+  <text x="40" y="414" fill="#64748B" font-family="system-ui,sans-serif" font-size="12">3 _ube · canl1 senkron</text>
+  <rect x="40" y="432" width="88" height="24" rx="12" fill="#DCFCE7"/>
+  <text x="52" y="448" fill="#166534" font-family="system-ui,sans-serif" font-size="11" font-weight="600">Çevrimiçi</text>
+  <rect x="140" y="432" width="100" height="24" rx="12" fill="#DBEAFE"/>
+  <text x="152" y="448" fill="#1E40AF" font-family="system-ui,sans-serif" font-size="11" font-weight="600">NFC haz1r</text>
+</svg>
