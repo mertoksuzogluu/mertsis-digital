@@ -12,14 +12,16 @@ export const siteConfig = {
   contact: {
     email: "mert@mertsisotomasyon.com",
     phone: "+90 538 813 50 15",
-    address: "İstanbul, Türkiye",
+    address:
+      "Beylikdüzü OSB Mah. Mermerciler San. Sit. 1. Cd. No:16 Dükkan-4 Beylikdüzü/İSTANBUL",
   },
 
   /** Gizlilik / KVKK sayfası iletişim alanları */
   privacy: {
     email: "destek@mertsisdigital.com",
     company: "Mertsis Digital / Mertsis Otomasyon",
-    address: "[Şirket adresi buraya]",
+    address:
+      "Beylikdüzü OSB Mah. Mermerciler San. Sit. 1. Cd. No:16 Dükkan-4 Beylikdüzü/İSTANBUL",
     lastUpdated: "12 Ağustos 2026",
   },
 
