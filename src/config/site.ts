@@ -15,6 +15,14 @@ export const siteConfig = {
     address: "İstanbul, Türkiye",
   },
 
+  /** Gizlilik / KVKK sayfası iletişim alanları */
+  privacy: {
+    email: "destek@mertsisdigital.com",
+    company: "Mertsis Digital / Mertsis Otomasyon",
+    address: "[Şirket adresi buraya]",
+    lastUpdated: "12 Ağustos 2026",
+  },
+
   /** Görüşme Planla butonu bu linke gider (Calendly vb.) */
   calendlyUrl: "https://calendly.com/mertsis-digital/30min",
 
