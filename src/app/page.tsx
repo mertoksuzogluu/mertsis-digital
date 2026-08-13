@@ -8,6 +8,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CaseStudyCard } from "@/components/CaseStudyCard";
 import { Hero } from "@/components/home/Hero";
 import { ServiceCards } from "@/components/home/ServiceCards";
+import { PdksPhonesSection } from "@/components/home/PdksPhonesSection";
 import { ProcessSection } from "@/components/home/ProcessSection";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { FAQSection } from "@/components/home/FAQSection";
@@ -34,6 +35,8 @@ export default function HomePage() {
         </div>
       </section>
 
+      <PdksPhonesSection />
+
       <ProcessSection steps={processSteps} />
 
       {/* Öne Çıkan Projeler */}
@@ -54,7 +57,7 @@ export default function HomePage() {
               <SectionHeading
                 id="projeler-heading"
                 title="Öne Çıkan Projeler"
-                subtitle="Son dönemde markaların büyümesine nasıl katkı sağladığımıza bir göz atın."
+                subtitle="PDKS, web panelleri ve ürün deneyimi — seçili işler."
               />
             </div>
             <div>
