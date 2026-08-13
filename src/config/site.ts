@@ -26,7 +26,7 @@ export const siteConfig = {
   },
 
   /** Görüşme Planla butonu bu linke gider (Calendly vb.) */
-  calendlyUrl: "https://calendly.com/mertsis-digital/30min",
+  calendlyUrl: "https://calendly.com/mertoksuzogluu/30min",
 
   social: {
     linkedin: "https://linkedin.com/company/mertsis-digital",
