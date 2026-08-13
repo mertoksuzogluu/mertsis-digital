@@ -25,6 +25,39 @@ export interface CaseStudy {
 
 export const caseStudies: CaseStudy[] = [
   {
+    slug: "pdks-cok-subeli-operasyon",
+    baslik: "Mertsis PDKS",
+    kategori: "PDKS & Personel Yazılımı",
+    hizmetler: ["PDKS", "Kiosk", "Mobil", "Admin Panel"],
+    yil: "2026",
+    kisaOzet:
+      "Mertsis Digital PDKS: QR/NFC kiosk, personel mobil uygulaması ve yönetim paneli ile uçtan uca devam takibi.",
+    problem:
+      "Giriş-çıkış Excel ve manuel imza ile tutuluyordu; şubeler arası rapor gecikmeli, sahte kayıt riski yüksekti.",
+    cozum:
+      "Kiosk terminali, personel mobil uygulaması ve admin paneli tek sistemde birleştirildi. Dönen QR, NFC ve çevrimdışı kuyruk ile sahada kesintisiz kayıt sağlandı.",
+    teslimatlar: [
+      "Android kiosk uygulaması",
+      "Personel mobil uygulaması (giriş, çıkış, QR, geçmiş)",
+      "Yönetici paneli (personel, vardiya, rapor)",
+      "NFC kart tanımlama ve çok şube yapısı",
+    ],
+    metrikler: [
+      { label: "Manuel kayıt", value: "Kaldırıldı" },
+      { label: "Şube raporu", value: "Anlık" },
+      { label: "Çevrimdışı", value: "Kuyruklu" },
+    ],
+    galeriGorselleri: [
+      "/work/project-pdks.webp",
+      "/services/pdks-screens/giris.png",
+      "/services/pdks-screens/cikis.png",
+      "/services/pdks-screens/qr.png",
+      "/services/pdks-screens/gecmis.png",
+      "/work/project-pdks-mobile.webp",
+    ],
+    kapakGorseli: "/work/project-pdks.webp",
+  },
+  {
     slug: "e-ticaret-roas-artisi",
     baslik: "E-Ticaret ROAS Artışı",
     kategori: "Performans Pazarlaması",
@@ -99,8 +132,8 @@ export const caseStudies: CaseStudy[] = [
       { label: "Mobil skor", value: "98" },
       { label: "Lead formu dönüşümü", value: "%40 artış" },
     ],
-    galeriGorselleri: ["/work/project-web.svg", "/work/placeholder.svg", "/work/placeholder.svg"],
-    kapakGorseli: "/work/project-web.svg",
+    galeriGorselleri: ["/work/project-web.webp", "/work/project-web.webp", "/work/project-web.webp"],
+    kapakGorseli: "/work/project-web.webp",
   },
   {
     slug: "3d-ambalaj-urun-configurator",
@@ -125,8 +158,8 @@ export const caseStudies: CaseStudy[] = [
       { label: "Yapılandırma tamamlama", value: "%55" },
       { label: "Mobil kullanım", value: "%45" },
     ],
-    galeriGorselleri: ["/work/project-3d.svg", "/work/placeholder.svg", "/work/placeholder.svg"],
-    kapakGorseli: "/work/project-3d.svg",
+    galeriGorselleri: ["/work/project-3d.webp", "/work/project-3d.webp", "/work/project-3d.webp"],
+    kapakGorseli: "/work/project-3d.webp",
   },
   {
     slug: "urun-lansman-kampanyasi",
