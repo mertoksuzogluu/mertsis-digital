@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/Button";
+import { LoopingVideo } from "@/components/ui/LoopingVideo";
 import { siteConfig } from "@/config/site";
 
 const stats = [
@@ -188,24 +189,15 @@ export function Hero() {
           </div>
 
           <div className="hero-product">
-            <video
+            <LoopingVideo
               src="/services/pdks-demo.mp4"
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-              aria-label="PDKS personel uygulaması demo videosu"
+              aria-label="PDKS personel uygulaması animasyonu"
               style={{
                 width: "100%",
                 maxWidth: "480px",
                 height: "auto",
                 display: "block",
                 margin: "0 auto",
-                background: "transparent",
-                border: "none",
-                outline: "none",
-                boxShadow: "none",
               }}
             />
           </div>

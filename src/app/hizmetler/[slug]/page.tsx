@@ -9,6 +9,7 @@ import {
 } from "@/data/services";
 import { Button } from "@/components/ui/Button";
 import { PageHero } from "@/components/PageHero";
+import { LoopingVideo } from "@/components/ui/LoopingVideo";
 import { siteConfig } from "@/config/site";
 
 interface Props {
@@ -217,22 +218,13 @@ export default async function ServiceDetailPage({ params }: Props) {
 
             <div>
               {service.video ? (
-                <video
+                <LoopingVideo
                   src={service.video}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
-                  aria-label={`${service.title} demo videosu`}
+                  aria-label={`${service.title} animasyonu`}
                   style={{
                     width: "100%",
                     height: "auto",
                     display: "block",
-                    background: "transparent",
-                    border: "none",
-                    outline: "none",
-                    boxShadow: "none",
                   }}
                 />
               ) : (
