@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { siteConfig } from "@/config/site";
 
@@ -189,50 +188,26 @@ export function Hero() {
           </div>
 
           <div className="hero-product">
-            <Link
-              href="/hizmetler/pdks"
-              style={{ display: "block", textDecoration: "none" }}
-              aria-label="PDKS hizmetini incele"
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/services/pdks-app.png"
-                alt="Mertsis Digital PDKS personel mobil uygulaması"
-                width={720}
-                height={900}
-                style={{
-                  width: "100%",
-                  maxWidth: "420px",
-                  height: "auto",
-                  margin: "0 auto",
-                  display: "block",
-                  filter: "drop-shadow(0 28px 50px rgba(15,23,42,0.22))",
-                }}
-              />
-            </Link>
-
-            <div className="hero-video-wrap">
-              <video
-                src="/services/pdks-demo.mp4"
-                poster="/services/pdks-app.png"
-                autoPlay
-                muted
-                loop
-                playsInline
-                controls
-                preload="metadata"
-                aria-label="PDKS personel uygulaması demo videosu"
-                style={{
-                  width: "100%",
-                  height: "auto",
-                  display: "block",
-                  borderRadius: "1rem",
-                  border: "1px solid rgba(0,0,0,0.06)",
-                  background: "#0a0a0a",
-                  boxShadow: "0 16px 40px -18px rgba(15,23,42,0.28)",
-                }}
-              />
-            </div>
+            <video
+              src="/services/pdks-demo.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              aria-label="PDKS personel uygulaması demo videosu"
+              style={{
+                width: "100%",
+                maxWidth: "480px",
+                height: "auto",
+                display: "block",
+                margin: "0 auto",
+                background: "transparent",
+                border: "none",
+                outline: "none",
+                boxShadow: "none",
+              }}
+            />
           </div>
         </div>
       </div>
@@ -264,17 +239,12 @@ export function Hero() {
         }
         .hero-product{
           width:100%;
-          max-width:560px;
+          max-width:480px;
           margin:0 auto;
-          display:grid;
-          gap:1.25rem;
-          justify-items:center;
         }
-        .hero-video-wrap{width:100%;max-width:420px}
         @media(min-width:1024px){
           .hero-layout{grid-template-columns:1fr 1.05fr;gap:3rem}
-          .hero-product{max-width:none;margin:0;grid-template-columns:0.9fr 1.1fr;align-items:center;justify-items:stretch}
-          .hero-video-wrap{max-width:none}
+          .hero-product{max-width:none;margin:0}
         }
       `,
         }}

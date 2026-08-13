@@ -60,13 +60,8 @@ export const services: ServiceCard[] = [
         body: "Yönetici paneli personel, vardiya ve devamı tek ekrandan izler; şube bazlı raporlar üretir.",
       },
     ],
-    image: "/services/pdks-app.png",
-    gallery: [
-      "/services/pdks-app.png",
-      "/services/pdks.webp",
-      "/services/pdks-mobile.webp",
-      "/services/pdks-hero.webp",
-    ],
+    image: "/services/pdks.webp",
+    gallery: ["/services/pdks.webp", "/services/pdks-mobile.webp", "/services/pdks-hero.webp"],
     video: "/services/pdks-demo.mp4",
   },
   {

@@ -216,69 +216,74 @@ export default async function ServiceDetailPage({ params }: Props) {
             </div>
 
             <div>
-              {service.video && (
+              {service.video ? (
                 <video
                   src={service.video}
-                  poster={service.image}
-                  controls
+                  autoPlay
+                  muted
+                  loop
                   playsInline
                   preload="metadata"
                   aria-label={`${service.title} demo videosu`}
                   style={{
                     width: "100%",
                     height: "auto",
-                    borderRadius: "1rem",
-                    border: "1px solid rgba(0,0,0,0.06)",
-                    background: "#0a0a0a",
-                    marginBottom: "0.75rem",
+                    display: "block",
+                    background: "transparent",
+                    border: "none",
+                    outline: "none",
+                    boxShadow: "none",
                   }}
                 />
-              )}
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={service.image}
-                alt={service.title}
-                width={800}
-                height={500}
-                style={{
-                  width: "100%",
-                  height: "auto",
-                  borderRadius: "1rem",
-                  border: "1px solid rgba(0,0,0,0.06)",
-                  background: "#f8faff",
-                }}
-              />
-              {service.gallery && service.gallery.length > 1 && (
-                <div
-                  style={{
-                    marginTop: "0.75rem",
-                    display: "grid",
-                    gridTemplateColumns: "repeat(2, 1fr)",
-                    gap: "0.75rem",
-                  }}
-                >
-                  {service.gallery
-                    .filter((src) => src !== service.image)
-                    .slice(0, 2)
-                    .map((src) => (
-                      // eslint-disable-next-line @next/next/no-img-element
-                      <img
-                        key={src}
-                        src={src}
-                        alt=""
-                        width={400}
-                        height={300}
-                        style={{
-                          width: "100%",
-                          height: "auto",
-                          borderRadius: "0.75rem",
-                          border: "1px solid rgba(0,0,0,0.06)",
-                          objectFit: "cover",
-                          background: "#f8faff",
-                        }}
-                      />
-                    ))}
-                </div>
+              ) : (
+                <>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    width={800}
+                    height={500}
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      borderRadius: "1rem",
+                      border: "1px solid rgba(0,0,0,0.06)",
+                      background: "#f8faff",
+                    }}
+                  />
+                  {service.gallery && service.gallery.length > 1 && (
+                    <div
+                      style={{
+                        marginTop: "0.75rem",
+                        display: "grid",
+                        gridTemplateColumns: "repeat(2, 1fr)",
+                        gap: "0.75rem",
+                      }}
+                    >
+                      {service.gallery
+                        .filter((src) => src !== service.image)
+                        .slice(0, 2)
+                        .map((src) => (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img
+                            key={src}
+                            src={src}
+                            alt=""
+                            width={400}
+                            height={300}
+                            style={{
+                              width: "100%",
+                              height: "auto",
+                              borderRadius: "0.75rem",
+                              border: "1px solid rgba(0,0,0,0.06)",
+                              objectFit: "cover",
+                              background: "#f8faff",
+                            }}
+                          />
+                        ))}
+                    </div>
+                  )}
+                </>
               )}
             </div>
           </div>
