@@ -220,6 +220,7 @@ export default async function ServiceDetailPage({ params }: Props) {
               {service.video ? (
                 <LoopingVideo
                   src={service.video}
+                  knockOutWhite
                   aria-label={`${service.title} animasyonu`}
                   style={{
                     width: "100%",

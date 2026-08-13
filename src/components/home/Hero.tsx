@@ -191,6 +191,7 @@ export function Hero() {
           <div className="hero-product">
             <LoopingVideo
               src="/services/pdks-demo.mp4"
+              knockOutWhite
               aria-label="PDKS personel uygulaması animasyonu"
               style={{
                 width: "100%",
