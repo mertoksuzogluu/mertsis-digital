@@ -17,6 +17,10 @@ export interface ServiceCard {
   /** Opsiyonel “nasıl çalışır” adımları (PDKS vb.) */
   steps?: { title: string; body: string }[];
   image: string;
+  /** Detay sayfası ek görseller */
+  gallery?: string[];
+  /** Ürün demo videosu (opsiyonel) */
+  video?: string;
 }
 
 export const services: ServiceCard[] = [
@@ -56,7 +60,14 @@ export const services: ServiceCard[] = [
         body: "Yönetici paneli personel, vardiya ve devamı tek ekrandan izler; şube bazlı raporlar üretir.",
       },
     ],
-    image: "/services/pdks.svg",
+    image: "/services/pdks-app.png",
+    gallery: [
+      "/services/pdks-app.png",
+      "/services/pdks.webp",
+      "/services/pdks-mobile.webp",
+      "/services/pdks-hero.webp",
+    ],
+    video: "/services/pdks-demo.mp4",
   },
   {
     id: "web-yazilim",
@@ -79,7 +90,7 @@ export const services: ServiceCard[] = [
       "Mobil uyumlu arayüz",
       "Analitik ve dönüşüm ölçümü",
     ],
-    image: "/services/web-yazilim.svg",
+    image: "/services/web-yazilim.webp",
   },
   {
     id: "3d-configurator",
@@ -101,7 +112,7 @@ export const services: ServiceCard[] = [
       "Mobil performans odaklı yükleme",
       "Sepet / ERP entegrasyonu",
     ],
-    image: "/services/3d-configurator.svg",
+    image: "/services/3d-configurator.webp",
   },
   {
     id: "performans-pazarlama",
@@ -123,7 +134,7 @@ export const services: ServiceCard[] = [
       "Haftalık performans raporları",
       "Ürün / lead odaklı hedefleme",
     ],
-    image: "/services/growth.svg",
+    image: "/services/growth.webp",
   },
   {
     id: "icerik-uretime",
@@ -145,7 +156,7 @@ export const services: ServiceCard[] = [
       "Reklam seti ve varyasyonlar",
       "Hafif motion ve animasyon",
     ],
-    image: "/services/growth.svg",
+    image: "/services/growth.webp",
   },
   {
     id: "sosyal-medya",
@@ -167,7 +178,7 @@ export const services: ServiceCard[] = [
       "Ürün lansman desteği",
       "Aylık performans özeti",
     ],
-    image: "/services/growth.svg",
+    image: "/services/growth.webp",
   },
   {
     id: "marka-kimligi",
@@ -189,7 +200,7 @@ export const services: ServiceCard[] = [
       "UI ve sosyal şablonlar",
       "Asset paketleri",
     ],
-    image: "/services/growth.svg",
+    image: "/services/growth.webp",
   },
   {
     id: "analitik-cro",
@@ -211,7 +222,7 @@ export const services: ServiceCard[] = [
       "A/B test planı",
       "Ürün kullanım metrikleri",
     ],
-    image: "/services/growth.svg",
+    image: "/services/growth.webp",
   },
 ];
 
