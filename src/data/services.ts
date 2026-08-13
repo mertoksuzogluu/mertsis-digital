@@ -107,7 +107,8 @@ export const services: ServiceCard[] = [
       "Mobil performans odaklı yükleme",
       "Sepet / ERP entegrasyonu",
     ],
-    image: "/services/3d-configurator.webp",
+    image: "/services/3d-configurator.png",
+    gallery: ["/services/3d-configurator.png"],
   },
   {
     id: "performans-pazarlama",

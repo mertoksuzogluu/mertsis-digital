@@ -158,8 +158,8 @@ export const caseStudies: CaseStudy[] = [
       { label: "Yapılandırma tamamlama", value: "%55" },
       { label: "Mobil kullanım", value: "%45" },
     ],
-    galeriGorselleri: ["/work/project-3d.webp", "/work/project-3d.webp", "/work/project-3d.webp"],
-    kapakGorseli: "/work/project-3d.webp",
+    galeriGorselleri: ["/work/project-3d.png"],
+    kapakGorseli: "/work/project-3d.png",
   },
   {
     slug: "urun-lansman-kampanyasi",
