@@ -40,40 +40,76 @@ export default async function CaseStudyPage({ params }: Props) {
         paddingBottom: "clamp(4rem, 8vw, 7rem)",
       }}
     >
-      {/* Hero */}
+      {/* Hero — kompakt kapak */}
       <div
-        className="relative aspect-[21/9] md:aspect-[3/1] bg-muted/20"
-        style={{ position: "relative", minHeight: "220px", background: "#f4f4f5" }}
+        style={{
+          position: "relative",
+          background: "linear-gradient(180deg, #f4f6fb 0%, #eef2ff 100%)",
+          borderBottom: "1px solid rgba(0,0,0,0.06)",
+        }}
       >
-        <img
-          src={project.kapakGorseli}
-          alt={project.baslik}
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
         <div
-          className="absolute bottom-0 left-0 right-0 container-narrow pb-8"
           style={{
             maxWidth: "64rem",
-            marginLeft: "auto",
-            marginRight: "auto",
-            paddingLeft: "1.25rem",
-            paddingRight: "1.25rem",
-            paddingBottom: "2rem",
+            margin: "0 auto",
+            padding: "1.25rem 1.25rem 0",
           }}
         >
           <Link
             href="/projeler"
-            className="text-body-sm text-muted hover:text-accent transition-colors"
+            style={{
+              fontSize: "0.875rem",
+              color: "#64748b",
+              textDecoration: "none",
+            }}
           >
             ← Projeler
           </Link>
-          <p className="mt-2 text-caption text-muted">
+          <p
+            style={{
+              margin: "0.5rem 0 0",
+              fontSize: "0.75rem",
+              color: "#94a3b8",
+            }}
+          >
             {project.kategori} · {project.yil}
           </p>
-          <h1 className="mt-2 text-display-sm md:text-display-md font-semibold text-foreground">
+          <h1
+            style={{
+              margin: "0.35rem 0 0",
+              fontSize: "clamp(1.5rem, 3vw, 2.25rem)",
+              fontWeight: 700,
+              letterSpacing: "-0.02em",
+              color: "#0a0a0a",
+            }}
+          >
             {project.baslik}
           </h1>
+        </div>
+
+        <div
+          style={{
+            maxWidth: "42rem",
+            margin: "1.25rem auto 0",
+            padding: "0 1.25rem 1.75rem",
+          }}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={project.kapakGorseli}
+            alt={project.baslik}
+            style={{
+              width: "100%",
+              maxHeight: "280px",
+              height: "auto",
+              objectFit: "contain",
+              display: "block",
+              margin: "0 auto",
+              borderRadius: "0.75rem",
+              background: "#fff",
+              border: "1px solid rgba(0,0,0,0.06)",
+            }}
+          />
         </div>
       </div>
 
@@ -154,6 +190,45 @@ export default async function CaseStudyPage({ params }: Props) {
             ))}
           </div>
         </section>
+
+        {project.galeriGorselleri.length > 1 && (
+          <section aria-labelledby="galeri-heading">
+            <h2
+              id="galeri-heading"
+              className="text-body font-semibold text-foreground mb-4"
+            >
+              Görseller
+            </h2>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fill, minmax(140px, 1fr))",
+                gap: "0.75rem",
+              }}
+            >
+              {project.galeriGorselleri
+                .filter((src) => src !== project.kapakGorseli)
+                .map((src) => (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    key={src}
+                    src={src}
+                    alt=""
+                    style={{
+                      width: "100%",
+                      maxHeight: "220px",
+                      height: "auto",
+                      objectFit: "contain",
+                      borderRadius: "0.75rem",
+                      border: "1px solid rgba(0,0,0,0.06)",
+                      background: "#f8faff",
+                      display: "block",
+                    }}
+                  />
+                ))}
+            </div>
+          </section>
+        )}
 
         <div className="pt-8 border-t border-border">
           <Button href="/iletisim?form=teklif" variant="primary" size="lg">
