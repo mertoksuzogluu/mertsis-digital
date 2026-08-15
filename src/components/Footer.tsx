@@ -70,7 +70,7 @@ export function Footer() {
               Sayfalar
             </h3>
             <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-              {[...siteConfig.nav, { label: "Gizlilik", href: "/gizlilik" }, { label: "Kullanım Şartları", href: "/kullanim-sartlari" }].map(
+              {[...siteConfig.nav, { label: "Gizlilik", href: "/gizlilik" }, { label: "Veri silme", href: "/veri-silme" }, { label: "Kullanım Şartları", href: "/kullanim-sartlari" }].map(
                 (item) => (
                   <li key={item.href} style={{ marginBottom: "0.5rem" }}>
                     <Link href={item.href} style={linkStyle}>

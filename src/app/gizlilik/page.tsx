@@ -162,7 +162,10 @@ export default function GizlilikPage() {
           <p style={pStyle}>
             Personel uygulamasında “Hesaptan çık” ile bu cihazdaki kayıt
             silinebilir; yeniden kullanım için işverenden yeni kayıt kodu
-            gerekir.
+            gerekir. Veri silme talebi için:{" "}
+            <a href="/veri-silme" style={{ color: "#2563eb", textDecoration: "none" }}>
+              mertsisdigital.com/veri-silme
+            </a>
           </p>
 
           <h2 style={h2Style}>8. Güvenlik</h2>
